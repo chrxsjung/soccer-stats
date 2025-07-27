@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soccer Stats</title>
+  <link rel="stylesheet" href="/app/styles.css">
+</head>
+
+<body>
+  <div class="header-container">
+
+    <div class="capybaraloader">
+      <div class="capybara">
+        <div class="capyhead">
+          <div class="capyear">
+            <div class="capyear2"></div>
+          </div>
+          <div class="capyear"></div>
+          <div class="capymouth">
+            <div class="capylips"></div>
+            <div class="capylips"></div>
+          </div>
+          <div class="capyeye"></div>
+          <div class="capyeye"></div>
+        </div>
+        <div class="capyleg"></div>
+        <div class="capyleg2"></div>
+        <div class="capyleg2"></div>
+        <div class="capy"></div>
+      </div>
+      <div class="loader">
+        <div class="loaderline"></div>
+      </div>
+    </div>
+
+    <div class="header">
+      <h1 class="header-title">EPL Player Stats</h1>
+      <p class="header-subtitle">Get started by searching up your
+        favorite players! <br>
+        For the best results, please enter the player's full name with no typos.
+        <br><br>
+        Since this is a free API, the data may not be 100% accurate or up-to-date.
+        Here are players already in the database from previous searches:<br>
+        (specific seasons show on card as well)
+      </p>
+
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for a player... " />
+        <button id="search-button">Search</button>
+        
+        <!-- ✅ Added season dropdown container -->
+        <div id="season-container"></div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="player-container"></div>
+
+  <div id="app"></div>
+
+  <template id="player-card-template">
+    <div class="player-card">
+      <img class="player-photo" />
+
+      <h2 class="player-name"></h2>
+      <p class="player-season"></p>
+      <p class="player-nationality"></p>
+
+      <p class="player-position"></p>
+      <p class="player-team"></p>
+      <p class="player-goals"></p>
+      <p class="player-assists"></p>
+
+      <button class="toggle-stats-btn">Show More</button>
+
+      <div class="player-extra-stats hidden">
+        <p class="player-minutes"></p>
+        <p class="player-appearances"></p>
+        <p class="player-rating"></p>
+        <p class="player-shots"></p>
+        <p class="player-passes"></p>
+        <p class="player-dribbles"></p>
+        <p class="player-duels"></p>
+        <p class="player-cards"></p>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
