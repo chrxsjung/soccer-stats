@@ -10,6 +10,12 @@ the json that express sends using res.json(data) is the http response that your 
 
 in production, vite isn’t running. it only builds the frontend files. the frontend fetches /api/..., which vercel handles directly with serverless functions.
 
+main.js calls api folder which lives in vercel serverless and this makes api key not avaliable. the api js files have the logic of calling the football api with the right req and the res is the json that gets given to main.js 
+
+for all players returned, the template is filled, and inserted to supabase. from then on if the player searched is alr in the database dont call api. 
+
+
+
 Browser fetch('/api/player')
 ↓
 Vite dev server intercepts
