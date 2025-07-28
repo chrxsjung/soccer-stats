@@ -7,6 +7,27 @@
   text-align: center;
   margin-top: 10px;
 }
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-buttons button {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carousel-buttons button:hover {
+  background: #5a4bcf;
+}
 
 
 #season-select {
