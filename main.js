@@ -333,7 +333,7 @@ function updateVideoSource() {
 
 const backToHomeBtn = document.getElementById("back-to-home");
 backToHomeBtn.addEventListener("click", () => {
-  window.location.reload();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // On load
