@@ -538,7 +538,7 @@ html {
 @media (max-width: 965px) {
   .video-container iframe {
     max-width: 1000px;
-    height: calc(1000px * 9 / 16);
+    height: calc(900px * 9 / 16);
   }
 }
 
