@@ -513,7 +513,9 @@ html {
 }
 
 .video-container {
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -523,7 +525,28 @@ html {
 }
 
 .video-container iframe {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: calc(1000px * 9 / 16);
+  border: none;
   pointer-events: none;
+}
+
+
+
+@media (max-width: 965px) {
+  .video-container iframe {
+    max-width: 1000px;
+    height: calc(900px * 9 / 16);
+  }
+}
+
+@media (max-width: 850px) {
+  .video-container iframe {
+    max-width: 100%;
+    height: calc(100vw * 9 / 16);
+  }
 }
 
 body {

@@ -333,8 +333,11 @@ function updateVideoSource() {
 
 const backToHomeBtn = document.getElementById("back-to-home");
 backToHomeBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.location.reload();
 });
+
+// Disable scroll restoration so page always starts at top on refresh
+history.scrollRestoration = "manual";
 
 // On load
 loadPlayersFromDB();
