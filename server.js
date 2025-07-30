@@ -61,8 +61,8 @@ app.get("/api/seasons", async (req, res) => {
   }
 });
 
-// 🔊 Start the Express server on port 5000
-const PORT = 5000;
+// 🔊 Start the Express server on port 3001
+const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`✅ API server running at http://localhost:${PORT}`);
 });

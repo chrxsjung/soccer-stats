@@ -6,37 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soccer Stats</title>
   <link rel="stylesheet" href="/app/styles.css">
+  <link rel="icon" type="image/svg+xml" href="https://www.svgrepo.com/show/353655/soccer.svg" />
+
 </head>
 
 <body>
+  <button id="back-to-home" class="back-to-home-btn">Back to Top</button>
   <div class="header-container">
-
-    <div class="capybaraloader">
-      <div class="capybara">
-        <div class="capyhead">
-          <div class="capyear">
-            <div class="capyear2"></div>
-          </div>
-          <div class="capyear"></div>
-          <div class="capymouth">
-            <div class="capylips"></div>
-            <div class="capylips"></div>
-          </div>
-          <div class="capyeye"></div>
-          <div class="capyeye"></div>
-        </div>
-        <div class="capyleg"></div>
-        <div class="capyleg2"></div>
-        <div class="capyleg2"></div>
-        <div class="capy"></div>
-      </div>
-      <div class="loader">
-        <div class="loaderline"></div>
-      </div>
-    </div>
-
     <div class="header">
-      
+
+      <div class="video-container">
+        <iframe width="560" height="315" src="" title="Premier League Best Goals" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          >
+        </iframe>
+      </div>
+
       <h1 class="header-title">EPL Player Stats</h1>
       <p class="header-subtitle">Get started by searching up your
         favorite players! <br>
@@ -44,13 +29,13 @@
         <br><br>
         Since this is a free API, the data may not be 100% accurate or up-to-date.
         Here are players already in the database from previous searches:<br>
-        Press the arrow keys to navigate through seasons. 
+        Press the arrow keys to navigate through seasons.
       </p>
 
       <div class="search-container">
         <input type="text" id="search-input" placeholder="Search for a player... " />
         <button id="search-button">Search</button>
-        
+
         <!-- ✅ Added season dropdown container -->
         <div id="season-container"></div>
       </div>

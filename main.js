@@ -308,6 +308,35 @@ function renderSeasonDropdown(seasonYears) {
   seasonContainer.appendChild(select);
 }
 
+const highlightVideo = "eFtSxgZbwu4";
+
+const highlightSegments = [
+  { start: 610, end: 640 }, // 10:10 - 10:40
+  { start: 851, end: 881 }, // 14:11 - 14:41
+  { start: 711, end: 736 }, // 11:51 - 12:16
+  { start: 641, end: 660 }, // 10:41 - 11:00
+];
+
+function getRandomSegment() {
+  const randomIndex = Math.floor(Math.random() * highlightSegments.length);
+  return highlightSegments[randomIndex];
+}
+
+function updateVideoSource() {
+  const segment = getRandomSegment();
+  const iframe = document.querySelector(".video-container iframe");
+  if (iframe) {
+    const videoUrl = `https://www.youtube.com/embed/${highlightVideo}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=${highlightVideo}&start=${segment.start}&end=${segment.end}`;
+    iframe.src = videoUrl;
+  }
+}
+
+const backToHomeBtn = document.getElementById("back-to-home");
+backToHomeBtn.addEventListener("click", () => {
+  window.location.reload();
+});
+
 // On load
 loadPlayersFromDB();
 fetchAvailableSeasons();
+updateVideoSource();
