@@ -151,7 +151,7 @@ async function loadPlayersFromDB() {
 
 async function fetchPlayerData(playerName) {
   const season = document.getElementById("season-select").value;
-  const url = `/api/player?playerName=${encodeURIComponent(
+  const url = `/pages/api/player?playerName=${encodeURIComponent(
     playerName
   )}&season=${season}&league=${LEAGUE}`;
 
@@ -276,7 +276,7 @@ async function fetchPlayerData(playerName) {
 
 async function fetchAvailableSeasons() {
   try {
-    const response = await fetch(`/api/seasons?league=${LEAGUE}`);
+    const response = await fetch(`/pages/api/seasons?league=${LEAGUE}`);
     const data = await response.json();
     const seasons = data.response[0]?.seasons;
 
