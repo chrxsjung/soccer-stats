@@ -339,6 +339,22 @@ backToHomeBtn.addEventListener("click", () => {
 // Disable scroll restoration so page always starts at top on refresh
 history.scrollRestoration = "manual";
 
+const searchInput = document.getElementById("search-database");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  const wrappers = document.querySelectorAll(".carousel-wrapper");
+
+  wrappers.forEach((wrapper) => {
+    const playerNames = wrapper.querySelectorAll(".player-name");
+    const matchesQuery = Array.from(playerNames).some((el) =>
+      el.textContent.toLowerCase().includes(query)
+    );
+
+    wrapper.style.display = matchesQuery ? "block" : "none";
+  });
+});
+
 // On load
 loadPlayersFromDB();
 fetchAvailableSeasons();

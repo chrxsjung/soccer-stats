@@ -241,7 +241,8 @@
     /* ✅ ADD THIS LINE */
   }
 
-  #search-input {
+  #search-input,
+  #search-database {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -576,7 +577,8 @@ body {
   }
 }
 
-#search-input {
+#search-input,
+#search-database {
   width: 400px;
   padding: 15px 25px;
   border: none;
@@ -589,7 +591,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#search-input::placeholder {
+#search-input::placeholder,
+#search-database::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
 }
@@ -611,4 +614,24 @@ body {
 #search-button:hover {
   transform: translateY(-3px);
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+#search-database {
+  margin-top: 50px;
+  margin-bottom: -85px;
+}
+
+@media (max-width: 766px) {
+  #search-database {
+    margin-top: 10px;
+    margin-bottom: -55px;
+  }
+}
+
+@media (max-width: 460px) {
+  .player-card {
+    max-width: 70%;
+    margin: 0 auto;
+    /* this centers the card horizontally */
+  }
 }
